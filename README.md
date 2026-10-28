@@ -332,6 +332,7 @@ A successful run also depends on the availability of the dataset, trained weight
 - **Source dataset:** [Kvasir-SEG on Roboflow Universe](https://universe.roboflow.com/teste-mhypc/kvasir-seg-gouny)
 - **Notebook:** `Capsule_Perception_Final.ipynb`
 - **Model checkpoints and experiment artifacts:** [Download the project artifacts from Google Drive](https://drive.google.com/drive/folders/1mnFeBJNNFEgSav6DUgRR2b_ha2_FwKxb?usp=drive_link)
+- **Dataset download instructions:** [See DATASET.md](DATASET.md)
 
 ### Setup
 
