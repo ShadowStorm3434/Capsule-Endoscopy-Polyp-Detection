@@ -325,6 +325,46 @@ A successful run also depends on the availability of the dataset, trained weight
 
 ---
 
+## Experiment Artifacts and Model Weights
+
+The project uses trained model weights, input videos, and prediction CSV files for model evaluation and temporal analysis.
+
+### E3 Trained Model
+
+The E3 model weights are stored at:
+
+`Capsule_Perception/experiments/Professor_Fresh_Run/training_runs/E3_Sakaguchi_Fractional_DWT/weights/best.pt`
+
+The file is named `best.pt`. Preserve the directory structure and filename expected by the notebook.
+
+### E4 Input Videos
+
+The E4 video-processing experiment uses input videos stored in:
+
+`Capsule_Perception/experiments/Professor_Fresh_Run/E4_Final_HMM/Videos/`
+
+The existing video files are:
+
+- `512722d1-05f9-4454-a343-7aba1fb462c2.avi`
+- `df1aa095-0cab-4433-97fe-00d456f33615.avi`
+
+### Prediction Files
+
+The E4 experiment directory also contains:
+
+- Raw E3 video predictions: `raw_video_predictions/df1aa095-0cab-4433-97fe-00d456f33615_predictions.csv`
+- HMM-filtered E4 predictions: `hmm_video_predictions/df1aa095-0cab-4433-97fe-00d456f33615_e4_hmm.csv`
+
+These files support frame-level analysis and comparison between raw detections and temporally filtered predictions.
+
+### Access and Reproducibility
+
+Large files, including model weights and videos, may be stored outside the GitHub repository. If they are not included in the repository, users must obtain the required artifacts separately and place them in the documented Google Drive directories.
+
+The notebook relies on predefined paths. Keep directory names and filenames unchanged when running the notebook without code modifications.
+
+Some artifacts may be generated during notebook execution rather than downloaded beforehand. Refer to the execution order and file dependencies of the notebook to determine which files must be present before each experiment.
+
 ## 8. Evaluation
 
 The notebook includes model evaluation and comparisons across the implemented experiments.
