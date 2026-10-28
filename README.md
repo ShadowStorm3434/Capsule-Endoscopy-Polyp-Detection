@@ -40,49 +40,56 @@ Refer to the notebook for the actual implementation, experiment parameters, and 
 
 ---
 
-## 4. Dataset
+## Dataset
 
-The project uses a YOLO-format version of the Kvasir-SEG dataset.
+This project uses the Kvasir-SEG dataset, originally designed for polyp segmentation, obtained from Roboflow Universe.
 
-The dataset is divided into:
+**Dataset source:** [Kvasir-SEG on Roboflow Universe](https://universe.roboflow.com/teste-mhypc/kvasir-seg-gouny)
 
-| Split | Number of images |
+### Dataset Preparation
+
+The original dataset contains images with polyp segmentation annotations. For this project, the dataset was converted from segmentation annotations to **YOLO object detection format**, allowing the YOLOv8n model to detect polyps using bounding boxes.
+
+The dataset used for the experiments contains 1,000 images divided into the following splits:
+
+| Split | Images |
 |---|---:|
 | Training | 700 |
 | Validation | 150 |
 | Testing | 150 |
 | **Total** | **1,000** |
 
-The dataset directory must retain the structure and filenames expected by the notebook.
+### Required Directory Structure
 
-### Expected dataset location
-
-The notebook uses Google Drive as its storage location. The expected dataset root is:
+The notebook expects the dataset to be available in Google Drive at the following location:
 
 `/content/drive/MyDrive/Capsule_Perception/Kvasir-SEG.yolov8_split/`
 
-The directory must contain the training, validation, and test splits:
+The directory structure must be preserved:
 
 ```text
-Kvasir-SEG.yolov8_split/
-├── train/
-├── val/
-└── test/
+My Drive/
+└── Capsule_Perception/
+    └── Kvasir-SEG.yolov8_split/
+        ├── train/
+        ├── val/
+        └── test/
 ```
 
-**Important**: Keep the folder names unchanged because the notebook uses predefined file paths. The dataset version downloaded from Roboflow may have a different split or directory structure, so verify it before running the notebook. Do not change the notebook code.
+Each split must contain the images and corresponding object detection annotations in the format expected by the notebook.
 
-The contents of each split must match the format expected by the notebook and the YOLO data configuration, including the relevant images and annotation files.
+### Setup Instructions
 
-### Dataset source
+1. Open the [Kvasir-SEG Roboflow dataset](https://universe.roboflow.com/teste-mhypc/kvasir-seg-gouny).
+2. Download the appropriate dataset version or obtain the converted dataset used in the experiments.
+3. Ensure that the annotations are in YOLO object detection format, with bounding boxes rather than segmentation polygons.
+4. Ensure that the dataset has the expected 700/150/150 train-validation-test split.
+5. Upload the dataset to Google Drive under `Capsule_Perception/Kvasir-SEG.yolov8_split/`.
+6. Preserve the directory names expected by the notebook.
 
-The original Kvasir-SEG dataset is available from the official dataset website:
+**Reproducibility note:** The Roboflow page provides the original dataset source. The downloaded version may differ from the converted dataset used in the experiments. For reproducible results, use the same object detection annotations, dataset split, and image files as the original experiments.
 
-https://universe.roboflow.com/teste-mhypc/kvasir-seg-gouny
-
-Use the dataset version and YOLO-format conversion corresponding to the project. Check the dataset's terms before redistributing its files.
-
----
+Please follow the dataset's applicable licensing, attribution, and redistribution requirements.
 
 ## 5. Required Google Drive Folder Structure
 
