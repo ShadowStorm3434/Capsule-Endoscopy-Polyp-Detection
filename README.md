@@ -325,6 +325,29 @@ A successful run also depends on the availability of the dataset, trained weight
 
 ---
 
+## Reproducing the Experiments
+
+### Required Resources
+
+- **Source dataset:** [Kvasir-SEG on Roboflow Universe](https://universe.roboflow.com/teste-mhypc/kvasir-seg-gouny)
+- **Notebook:** `Capsule_Perception_Final.ipynb`
+- **Model checkpoints and experiment artifacts:** [Download the project artifacts from Google Drive](https://drive.google.com/drive/folders/1mnFeBJNNFEgSav6DUgRR2b_ha2_FwKxb?usp=drive_link)
+
+### Setup
+
+1. Clone or download this repository.
+2. Open `Capsule_Perception_Final.ipynb` in Google Colab.
+3. Download the required dataset and experiment artifacts.
+4. Place the files in the directory structure documented above, preserving all expected filenames.
+5. Mount Google Drive in Colab.
+6. Run the notebook cells in order.
+
+The notebook uses predefined paths under `/content/drive/MyDrive/Capsule_Perception/`. To run it without modifying the code, ensure that all required files are available at their expected locations.
+
+The dataset used in the experiments was converted from segmentation annotations to YOLO object detection format. For reproducible results, use the same converted annotations and train-validation-test split as the original experiments.
+
+Large artifacts are distributed separately from the GitHub repository to keep the repository manageable. Access to external resources may be subject to their respective licenses and sharing permissions.
+
 ## Experiment Artifacts and Model Weights
 
 The project uses trained model weights, input videos, and prediction CSV files for model evaluation and temporal analysis.
