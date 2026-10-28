@@ -1,0 +1,7 @@
+ultralytics==8.4.152
+opencv-python
+numpy
+pandas
+matplotlib
+PyYAML
+PyWavelets
