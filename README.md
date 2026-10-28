@@ -70,7 +70,7 @@ Kvasir-SEG.yolov8_split/
 └── test/
 ```
 
-**Important:** This is the directory structure shown in the current project setup. Do not rename the dataset folder or its split directories unless you also update the corresponding paths in the notebook. Since the notebook code will remain unchanged, recreate the expected paths exactly.
+**Important**: Keep the folder names unchanged because the notebook uses predefined file paths. The dataset version downloaded from Roboflow may have a different split or directory structure, so verify it before running the notebook. Do not change the notebook code.
 
 The contents of each split must match the format expected by the notebook and the YOLO data configuration, including the relevant images and annotation files.
 
@@ -78,7 +78,7 @@ The contents of each split must match the format expected by the notebook and th
 
 The original Kvasir-SEG dataset is available from the official dataset website:
 
-https://datasets.simula.no/kvasir-seg/
+https://universe.roboflow.com/teste-mhypc/kvasir-seg-gouny
 
 Use the dataset version and YOLO-format conversion corresponding to the project. Check the dataset's terms before redistributing its files.
 
