@@ -35,7 +35,6 @@ A separate Arduino UNO-controlled servo arm carries an external magnet for bench
 | E2 | E1 enhancement with an additional fractional-derivative operation. |
 | E3 | Enhanced image processing incorporating Haar DWT detail enhancement. |
 | E4 | Temporal filtering using a Hidden Markov Model (HMM) based on E3 predictions. |
-| E5 | Additional temporal/HMM configurations and comparisons. |
 
 Refer to the notebook for the actual implementation, experiment parameters, and evaluation procedures.
 
